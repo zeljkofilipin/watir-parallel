@@ -1,1 +1,1 @@
-default: --format junit --out ./spec/reports/
+default: --format html --out report<%= ENV['TEST_ENV_NUMBER'] %>.html
