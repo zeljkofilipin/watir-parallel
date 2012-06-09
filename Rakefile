@@ -10,5 +10,6 @@ end
 
 desc "run cucumber features in parallel"
 task :parallel do
-  `parallel_cucumber features/`
+  processes = FileList["./features/*.feature"].size
+  `parallel_cucumber features/ -n #{processes}`
 end
