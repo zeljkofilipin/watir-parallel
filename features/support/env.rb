@@ -11,7 +11,7 @@ def browser_for(environment, username, api_key)
     caps = Selenium::WebDriver::Remote::Capabilities.firefox
     caps.version = "11"
     caps.platform = :VISTA
-    caps[:name] = environment
+    caps[:name] = "#{environment} #{ENV['TEST_ENV_NUMBER']}"
 
     require "selenium/webdriver/remote/http/persistent" # :http_client
     Watir::Browser.new(
