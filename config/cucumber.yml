@@ -1,0 +1,1 @@
+default: --format junit --out ./spec/reports/
