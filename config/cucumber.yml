@@ -1,1 +1,2 @@
 default: --format html --out report<%= ENV['TEST_ENV_NUMBER'] %>.html
+dev: --format progress
